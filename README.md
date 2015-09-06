@@ -3,6 +3,8 @@
 ### Automatic
 ```
 curl -s https://raw.githubusercontent.com/syrgak/dotvim/master/install.sh | bash
+(or shorter)
+curl -s https://goo.gl/nTXUtf | bash
 ```
 
 ### Manual
