@@ -47,3 +47,6 @@ set undoreload=10000
 "configure hotkeys for CtrlP
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
+
+"set rich colors
+set t_Co=256
