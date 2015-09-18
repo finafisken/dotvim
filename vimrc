@@ -28,10 +28,20 @@ set laststatus=2
 "disable audio bell
 set visualbell
 
+"open new split panes to right and bottom, which feels more natural
+set splitbelow
+set splitright
+
 "tabs not spaces
 set noexpandtab
 set tabstop=4
 set shiftwidth=4
+
+"autocomplete with dictionary words when spell check is on
+set complete+=kspell
+
+"always use vertical diffs
+set diffopt+=vertical
 
 "directory for backup files
 set backupdir=/tmp
