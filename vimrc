@@ -50,3 +50,6 @@ let g:ctrlp_cmd = 'CtrlP'
 
 "set rich colors
 set t_Co=256
+
+"ignore syntax check using syntastic for java files (too heavy)
+let g:syntastic_ignore_files = ['\.java$']
