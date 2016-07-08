@@ -1,3 +1,5 @@
+set encoding=utf-8
+
 "activate pathogen
 execute pathogen#infect()
 execute pathogen#helptags()
@@ -16,6 +18,8 @@ let mapleader = ','
 
 set smartindent
 set hlsearch
+"ignore case in search
+set ignorecase
 "show line numbers
 set number
 set autoindent
@@ -31,6 +35,24 @@ set visualbell
 "open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright
+
+"map git commands
+map <leader>b :Gblame<cr>
+map <leader>l :!clear && git log -p %<cr>
+map <leader>d :!clear && git diff %<cr>
+
+"map Silver Searcher
+map <leader>a :Ag!<space>
+
+"clear the command line and search highlighting
+noremap <C-l> :nohlsearch<CR>
+
+"CtrlP
+let g:ctrlp_max_height = 30
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_match_window_reversed = 0
+"use silver searcher for ctrlp
+let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
 "tabs not spaces
 set noexpandtab
