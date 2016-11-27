@@ -75,6 +75,7 @@ set undofile
 set undodir=$HOME/.vim/undo
 set undolevels=1000
 set undoreload=10000
+set history=500
 
 "configure hotkeys for CtrlP
 let g:ctrlp_map = '<c-p>'
