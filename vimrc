@@ -4,6 +4,7 @@ set encoding=utf-8
 execute pathogen#infect()
 execute pathogen#helptags()
 
+set nocompatible
 syntax on
 filetype plugin indent on
 
@@ -20,6 +21,8 @@ set smartindent
 set hlsearch
 "ignore case in search
 set ignorecase
+"show matches as we type
+set incsearch
 "show line numbers
 set number
 set autoindent
@@ -55,9 +58,15 @@ let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
 
 "tabs not spaces
-set noexpandtab
-set tabstop=4
-set shiftwidth=4
+"set noexpandtab
+"set tabstop=4
+"set shiftwidth=4
+
+"spaces
+set expandtab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
 
 "autocomplete with dictionary words when spell check is on
 set complete+=kspell
@@ -86,3 +95,20 @@ set t_Co=256
 
 "ignore syntax check using syntastic for java files (too heavy)
 let g:syntastic_ignore_files = ['\.java$']
+
+map <C-n> :NERDTreeToggle<CR>
+
+map <C-right> <ESC>:bn<CR>
+map <C-left> <ESC>:bp<CR>
+
+"allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+
+nmap ic :s/^/#/g<CR>:let @/ = ""<CR>
+nmap rc :s/^#//g<CR>:let @/ = ""<CR>
+
+"shortcut for no highlight
+nnoremap <leader><space> :noh<CR>
+
+"quick search in current buffer
+nnoremap <leader>s :g//#<left><left>
